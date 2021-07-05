@@ -1,0 +1,18 @@
+<div *ngIf="url" style="text-align:center;margin-top: 10px;">
+  <audio controls="">
+    <source [src]="sanitize(url)" type="audio/wav">
+  </audio>
+</div>
+<div>
+  <button (click)="startRecording()" class="btn btn-primary" *ngIf="!isRecording"
+    style="cursor: pointer;background-color: green;color: white;font-size: 20px; margin-bottom: 10px;"> Start Recording
+  </button>
+  <button (click)="stopRecording()" class="btn btn-danger" *ngIf="isRecording"
+    style="cursor: pointer;background-color: red;color: white;font-size: 20px; margin-bottom: 10px;"> Stop Recording
+  </button>
+
+  <button (click)="uploadRecording()" class="btn btn-primary" *ngIf="url"
+    style="cursor: pointer;background-color: rgb(6, 86, 117);color: rgb(255, 255, 255);font-size: 15px; margin-bottom: 10px;">
+    Upload Tune!
+  </button>
+</div>

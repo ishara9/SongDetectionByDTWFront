@@ -1,0 +1,22 @@
+<div class="main-container" style="text-align: center;">
+  <div class="clr-row">
+    <div class="clr-col">
+      <div class="card">
+        <div class="card-header">
+          Hum your tune!
+        </div>
+        <div class="card-block">
+          <app-recorder></app-recorder>
+        </div>
+        <div class="card-footer">
+          <clr-accordion>
+            <clr-accordion-panel *ngFor="let song of songs" disabled=true>
+              <clr-accordion-title disabled=true>{{ song }}</clr-accordion-title>
+              <!-- <clr-accordion-content *clrIfExpanded>Content 1</clr-accordion-content> -->
+            </clr-accordion-panel>
+          </clr-accordion>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CallToServiceComponent } from './call-to-service/call-to-service.component';
+import { TuneGuesserBodyComponent } from './app-tune-guesser/app-tune-guesser.component';
 
 const routes: Routes = [
 ];

@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CallToServiceComponent } from './call-to-service.component';
+import { TuneGuesserBodyComponent } from './app-tune-guesser.component';
 
 describe('CallToServiceComponent', () => {
-  let component: CallToServiceComponent;
-  let fixture: ComponentFixture<CallToServiceComponent>;
+  let component: TuneGuesserBodyComponent;
+  let fixture: ComponentFixture<TuneGuesserBodyComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CallToServiceComponent ]
+      declarations: [TuneGuesserBodyComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CallToServiceComponent);
+    fixture = TestBed.createComponent(TuneGuesserBodyComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
