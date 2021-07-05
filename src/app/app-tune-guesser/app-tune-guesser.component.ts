@@ -9,7 +9,7 @@ import { SongService } from '../song.service';
 export class TuneGuesserBodyComponent implements OnInit {
 
 
-  songs: any[] = ["abc", "xyz"];
+  resultList = ["abc", "efg"];
 
   constructor(private dataService: SongService) { }
 
@@ -17,6 +17,10 @@ export class TuneGuesserBodyComponent implements OnInit {
     this.dataService.sendGetRequest().subscribe(data => {
       console.log(data);
     })
+  }
+
+  setValue(event: []) {
+    this.resultList = event;
   }
 
 }

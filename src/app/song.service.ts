@@ -10,6 +10,15 @@ const httpOptions = {
   })
 };
 
+interface Guess {
+  songList: [DTWObject]
+}
+
+interface DTWObject {
+  name: string,
+  distance: string
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -26,9 +35,9 @@ export class SongService {
     return this.httpClient.get(this.REST_API_SERVER + "echo", httpOptions);
   }
 
-  public uploadRecording(blob: any): Observable<Object> {
+  public uploadRecording(blob: any): Observable<Guess> {
     const formData: FormData = new FormData();
     formData.append("data", blob, "blob.wav");
-    return this.httpClient.post(this.REST_API_SERVER + "upload", formData);
+    return this.httpClient.post<Guess>(this.REST_API_SERVER + "upload", formData);
   }
 }

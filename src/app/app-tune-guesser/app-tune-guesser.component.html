@@ -6,11 +6,11 @@
           Hum your tune!
         </div>
         <div class="card-block">
-          <app-recorder></app-recorder>
+          <app-recorder (valueChange)=setValue($event)></app-recorder>
         </div>
         <div class="card-footer">
           <clr-accordion>
-            <clr-accordion-panel *ngFor="let song of songs" disabled=true>
+            <clr-accordion-panel *ngFor="let song of resultList" disabled=true>
               <clr-accordion-title disabled=true>{{ song }}</clr-accordion-title>
               <!-- <clr-accordion-content *clrIfExpanded>Content 1</clr-accordion-content> -->
             </clr-accordion-panel>

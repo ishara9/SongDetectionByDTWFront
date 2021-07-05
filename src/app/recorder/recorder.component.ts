@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import * as RecordRTC from 'recordrtc';
 import { SongService } from '../song.service';
@@ -21,6 +21,8 @@ export class RecorderComponent implements OnInit {
   error: any;
 
   blob: any;
+
+  @Output() valueChange = new EventEmitter();
 
   constructor(private domSanitizer: DomSanitizer, private dataService: SongService) { }
 
@@ -64,9 +66,11 @@ export class RecorderComponent implements OnInit {
   }
 
   uploadRecording() {
+    this.valueChange.emit(["Refreshing..."]);
     this.dataService.uploadRecording(this.blob).subscribe(data => {
-      console.log(data);
-    })
+      console.log(data.songList)
+      this.valueChange.emit(data.songList);
+    });
   }
 
   errorCallback(error: any) {
