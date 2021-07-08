@@ -44,7 +44,7 @@ export class RecorderComponent implements OnInit {
     var options = {
       mimeType: "audio/wav",
       numberOfAudioChannels: 1,
-      sampleRate: 44100,
+      desiredSampRate: 16000,
     };
     //Start Actuall Recording
     var StereoAudioRecorder = RecordRTC.StereoAudioRecorder;
