@@ -7,7 +7,7 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
-          "strict": true
+          "style": "scss"
         }
       },
       "root": "",
@@ -30,7 +30,7 @@
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/@clr/icons/clr-icons.min.css",
               "node_modules/@clr/ui/clr-ui.min.css",
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": [
               "node_modules/@webcomponents/custom-elements/custom-elements.min.js",
@@ -102,7 +102,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           }

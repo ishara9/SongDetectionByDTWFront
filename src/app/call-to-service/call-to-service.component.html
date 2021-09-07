@@ -3,13 +3,40 @@
     <div class="clr-col">
       <div class="card">
         <div class="card-header">
-          Hum your tune!
+          Upload your tune!
         </div>
-        <div class="card-block">
+        <div class="card-block" style="text-align: -webkit-center;">
+          <div class="clr-col-4">
+            <div class="add-logo-drndrp">
+              <div class="pp-drndrp inst-file overflow-h">
+                <div class="inst-file-wrapper">
+                  <div>
+                    <clr-icon shape="upload-cloud" class="z-1 inst-file-text" size="64"></clr-icon>
+                    <div class="d-none d-sm-block d-md-none d-lg-block font-weight-bold z-1 inst-file-text">
+                      <div>Drag and Drop or click here to upload music tune.</div>
+                    </div>
 
+                    <div class="d-lg-none d-xl-none d-md-block font-weight-bold z-1 inst-file-text">
+                      <span>Choose or click here to upload music tune.</span>
+                    </div>
+                    <div class="z-1 inst-file-text p8 mb-3 mt-0">
+                      (File must be in mp3 format <br> and should not exceed 5MB!)
+                    </div>
+                    <div class="btn btn-primary-outline m-0 z-1">
+                      <input type="file" (change)="previewFile()" (click)="onLogoClick($event)" #fileInput
+                        accept="audio/mpeg, audio/mp3, application/octet-stream" class="z-1" />
+                      <div class="m-0">Choose logo</div>
+                    </div>
+                    <p *ngIf="fileErrorMsg" class="error-message">{{fileErrorMsg}}</p>
+                  </div>
+                </div>
+                <img *ngIf="fileDataUri" src="assets/tune.png" alt="tunelogo">
+              </div>
+            </div>
+          </div>
         </div>
         <div class="card-footer">
-          <button class="btn btn-sm btn-link">Action</button>
+          <button class="btn btn-sm btn-link">Try me</button>
         </div>
       </div>
     </div>
