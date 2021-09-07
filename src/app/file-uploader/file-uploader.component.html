@@ -1,0 +1,15 @@
+<div class="file-upload" *ngIf="true">
+  <cds-file>
+    <label>select files</label>
+    <input type="file" multiple (change)="onFileUpload($event)" #fileUpload>
+    <input type="submit" value="submit">
+  </cds-file>
+  <!-- <div class="file-upload">
+
+    {{fileName || "No file uploaded yet."}}
+
+    <button mat-mini-fab color="primary" class="upload-btn" (click)="fileUpload.click()">
+      <mat-icon>attach_file</mat-icon>
+    </button>
+  </div> -->
+</div>

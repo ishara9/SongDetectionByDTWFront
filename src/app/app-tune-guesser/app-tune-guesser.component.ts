@@ -9,7 +9,7 @@ import { SongService } from '../song.service';
 export class TuneGuesserBodyComponent implements OnInit {
 
 
-  resultList = ["abc", "efg"];
+  resultList = [];
 
   constructor(private dataService: SongService) { }
 

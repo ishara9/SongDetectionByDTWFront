@@ -40,4 +40,11 @@ export class SongService {
     formData.append("data", blob, "blob.wav");
     return this.httpClient.post<Guess>(this.REST_API_SERVER + "upload", formData);
   }
+
+  public uploadFile(blob: any): Observable<Guess> {
+    const formData: FormData = new FormData();
+    formData.append("data", blob, "blob.wav");
+    return this.httpClient.post<Guess>(this.REST_API_SERVER + "upload", formData);
+  }
+
 }

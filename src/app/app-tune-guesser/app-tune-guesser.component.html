@@ -8,6 +8,11 @@
         <div class="card-block">
           <app-recorder (valueChange)=setValue($event)></app-recorder>
         </div>
+
+        <div>
+          <app-file-uploader (valueChange)=setValue($event)></app-file-uploader>
+        </div>
+
         <div class="card-footer">
           <clr-accordion>
             <clr-accordion-panel *ngFor="let song of resultList" disabled=true>

@@ -10,12 +10,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RecorderComponent } from './recorder/recorder.component';
+import { FileUploaderComponent } from './file-uploader/file-uploader.component';
 
+import '@cds/core/button/register.js';
+import '@cds/core/file/register.js';
 @NgModule({
   declarations: [
     AppComponent,
     TuneGuesserBodyComponent,
-    RecorderComponent
+    RecorderComponent,
+    FileUploaderComponent
   ],
   imports: [
     AppRoutingModule,
